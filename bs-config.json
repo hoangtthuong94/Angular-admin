@@ -1,0 +1,11 @@
+{
+	"server": {
+		"baseDir": "app",
+		"middleware": {
+			"0": null
+		},
+		"routes": {
+			"/node_modules": "node_modules"
+		}
+	}
+}

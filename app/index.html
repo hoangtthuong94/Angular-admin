@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+	<title ng-bind="title">Admin panel</title>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="style/main.css">
+	<!--<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+	<script src="../bower_components/angular/angular.min.js"></script>
+	<script src="../bower_components/angular-route/angular-route.min.js"></script>
+
+	<script src="app.js"></script>
+	<script src="routings.js"></script>
+	<script src="pages/dashboard/dashboard-ctrl.js"></script>
+	<script src="pages/login/login-ctrl.js"></script>
+
+</head>
+<body>
+
+<div ng-view="">{{title}}</div>
+
+</body>
+</html>
