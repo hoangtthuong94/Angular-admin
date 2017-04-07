@@ -5,10 +5,11 @@ app.config(function ($routeProvider, $locationProvider) {
 		})
 		.when('/dashboard', {
 			templateUrl: 'pages/dashboard/dashboard.html',
+			controller: 'dashboardCtrl'
 		})
 		.when('/login', {
 			templateUrl: 'pages/login/login.html',
-			controller: 'DashboardCtrl',
+			controller: 'loginCtrl',
 			requireLogin: true
 
 		});

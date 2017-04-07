@@ -1,1 +1,28 @@
-<div>dashboard</div>
+<div class="list-product container">
+	<h1 class="text-center">List product</h1>
+	<div class="bs-example" data-example-id="hoverable-table">
+		<table class="table table-hover">
+			<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Thumb</th>
+				<th>Action</th>
+			</tr>
+			</thead>
+			<tbody ng-init="getListProduct()">
+			<tr ng-repeat="item in listProduct">
+				<th>{{item.id}}</th>
+				<td>{{item.name}}</td>
+				<td>{{item.price}}</td>
+				<td><img ng-src="{{'images/' + item.thumb}}" alt=""></td>
+				<td>
+					<button class="btn btn-primary">Edit</button>
+					<button class="btn btn-danger">Delete</button>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

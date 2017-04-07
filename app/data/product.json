@@ -1,0 +1,53 @@
+[
+	{
+		"id": "0",
+		"name": "Son Dưỡng Cocoon 5g",
+		"price": 35000,
+		"thumb": "0.jpg",
+		"image": [
+			"0_0.jpg"
+		]
+	},
+	{
+		"id": "1",
+		"name": "Phấn Má Art Visage (3.3g)",
+		"price": 79000,
+		"thumb": "1.jpg",
+		"image": [
+			"1_0.jpg"
+		]
+	},
+	{
+		"id": "2",
+		"name": "Mặt Nạ Ngủ Cung Cấp Nước Tức Thì - Aqualia Masque Nuit Vichy 75ml - Tặng Xịt Khoáng 50ml - 100813851",
+		"price": 829000,
+		"thumb": "2.jpg",
+		"image": [
+			"2_0.jpg",
+			"2_1.jpg",
+			"2_2.jpg"
+		]
+	},
+	{
+		"id": "3",
+		"name": "Kem Chống Nắng Ngăn Sạm Da, Giảm Thâm Nám Vichy SPF50 Chống Tia UVA + UVB Ideal Soleil Anti Dark Spot - M9740000",
+		"price": 447000,
+		"thumb": "3.png",
+		"image": [
+			"3_0.png",
+			"3_1.png",
+			"3_2.png"
+		]
+	},
+	{
+		"id": "4",
+		"name": "Tinh Chất Dưỡng Da Săn Chắc Tái Tạo Từ Bifida Dew&Dew Bifida 100% Ampoule - DEW&DEW06 - 30ml",
+		"price": 450000,
+		"thumb": "4.jpg",
+		"image": [
+			"4_0.jpg",
+			"4_1.jpg",
+			"4_2.jpg"
+		]
+	}
+]
