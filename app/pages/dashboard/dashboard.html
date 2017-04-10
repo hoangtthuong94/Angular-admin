@@ -1,4 +1,12 @@
 <div class="list-product container">
+	<div class="header clearfix">
+		<nav>
+			<ul class="nav nav-pills pull-right">
+				<li role="presentation" class="active"><a href="#">Add new</a></li>
+			</ul>
+		</nav>
+		<h3 class="text-muted">Admin</h3>
+	</div>
 	<h1 class="text-center">List product</h1>
 	<div class="bs-example" data-example-id="hoverable-table">
 		<table class="table table-hover">
@@ -19,10 +27,31 @@
 				<td><img ng-src="{{'images/' + item.thumb}}" alt=""></td>
 				<td>
 					<button class="btn btn-primary">Edit</button>
-					<button class="btn btn-danger">Delete</button>
+					<button class="btn btn-danger" ng-click="confirmDeteleProduct($index)">Delete</button>
 				</td>
 			</tr>
 			</tbody>
 		</table>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deteleModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Detele Modal</h4>
+			</div>
+			<div class="modal-body text-center">
+				<h3>Are you sure want to delete product?</h3>
+				<h2>{{product.name}}</h2>
+				<img ng-src="{{'images/' + product.thumb}}" alt="">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+				<button type="button" class="btn btn-primary" ng-click="deleteProduct(product.index)">Yes</button>
+			</div>
+		</div>
 	</div>
 </div>
