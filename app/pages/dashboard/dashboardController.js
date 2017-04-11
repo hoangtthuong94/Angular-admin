@@ -6,7 +6,7 @@ app.controller('dashboardCtrl', function ($scope, $rootScope, $location, product
 		if (!productService.isGetProducts()) {
 			productService.getAPIProducts(onGetProductsSuccessfully, onGetProductsFailed);
 		} else {
-			$rootScope.listProduct = productService.getProducts();
+			$scope.listProduct = productService.getProducts();
 		}
 
 	};

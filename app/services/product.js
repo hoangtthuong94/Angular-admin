@@ -51,13 +51,25 @@ app.service("productService", function($http, $location) {
 
 	}
 
+	function updateProduct(id, product) {
+		for (var i=0; i<products.length; i++) {
+			if(products[i].id == id) {
+				products[i] = product;
+				return true;
+			}
+		}
+
+		return false
+	}
+
 	return {
 		getAPIProducts: getAPIProducts,
 		isGetProducts: isGetProducts,
 		getProducts: getProducts,
 		getProductById: getProductById,
 		deleteProductById: deleteProductById,
-		addProduct: addProduct
+		addProduct: addProduct,
+		updateProduct: updateProduct
 	};
 });
 
