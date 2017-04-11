@@ -1,1 +1,38 @@
-<div>delete</div>
+<div class="delete-product text-center" ng-init="getProduct()">
+	<h1>Delete Product</h1>
+	<h3>{{product.name}}</h3>
+	<p>{{product.price}}</p>
+	<div><img src="{{'images/' + product.thumb}}" alt="{{product.name}}"></div>
+	<button class="btn btn-lg btn-warning" ng-click="deleteProduct()">Delete</button>
+</div>
+
+
+<!-- Modal succes -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body text-center">
+				<h3>Delete success</h3>
+				<h2>{{product.name}}</h2>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" ng-click="goToDashboard()">Go to Dashboard</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal fail -->
+<div class="modal fade" id="failModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body text-center">
+				<h3>Delete fail</h3>
+				<h2>{{product.name}}</h2>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>

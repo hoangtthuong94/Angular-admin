@@ -11,7 +11,3 @@ app.run(function ($rootScope, $route, $location, userService) {
 	});*/
 
 })
-
-app.constant("ENV", {
-	apiUrl: "http://localhost:3000"
-});

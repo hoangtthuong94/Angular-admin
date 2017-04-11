@@ -2,7 +2,7 @@
 	<div class="header clearfix">
 		<nav>
 			<ul class="nav nav-pills pull-right">
-				<li role="presentation" class="active"><a href="#">Add new</a></li>
+				<li role="presentation" class="active"><a href="" ng-click="goToAddProduct()">Add new</a></li>
 			</ul>
 		</nav>
 		<h3 class="text-muted">Admin</h3>
@@ -24,10 +24,10 @@
 				<th>{{item.id}}</th>
 				<td>{{item.name}}</td>
 				<td>{{item.price}}</td>
-				<td><img ng-src="{{'images/' + item.thumb}}" alt=""></td>
+				<td><img ng-src="{{'images/' + item.thumb}}" alt="{{item.name}}"></td>
 				<td>
-					<button class="btn btn-primary">Edit</button>
-					<button class="btn btn-danger" ng-click="confirmDeteleProduct($index)">Delete</button>
+					<button class="btn btn-primary" ng-click="goToEditProduct(item.id)">Edit</button>
+					<button class="btn btn-danger" ng-click="goToDeleteProduct(item.id)">Delete</button>
 				</td>
 			</tr>
 			</tbody>

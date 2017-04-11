@@ -14,9 +14,14 @@ app.config(function ($routeProvider, $locationProvider) {
 			controller: 'loginCtrl',
 			requireLogin: false
 		})
-		.when('/delete/', {
+		.when('/product/delete/:productID', {
 			templateUrl: 'pages/delete/delete.html',
 			controller: 'deleteCtrl',
+			requireLogin: true
+		})
+		.when('/product/edit/:productID', {
+			templateUrl: 'pages/edit/edit.html',
+			controller: 'editCtrl',
 			requireLogin: true
 		});
 

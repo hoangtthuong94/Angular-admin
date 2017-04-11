@@ -1,32 +1,33 @@
-app.controller('dashboardCtrl', function ($scope, $rootScope, productService) {
-
-	$rootScope.listProduct = {};
-	$scope.product = {};
+app.controller('dashboardCtrl', function ($scope, $rootScope, $location, productService) {
+	$rootScope.title = "dashboard";
+	$scope.listProduct = null;
 
 	$scope.getListProduct = function () {
+		if (!productService.isGetProducts()) {
+			productService.getAPIProducts(onGetProductsSuccessfully, onGetProductsFailed);
+		} else {
+			$rootScope.listProduct = productService.getProducts();
+		}
 
-		productService.getListProduct(function (response) {
-			if(response.data){
-				console.log(response.data);
-				$rootScope.listProduct = response.data;
+	};
 
-			} else {
-				console.log("load fail");
-			}
-
-		});
-
+	$scope.goToDeleteProduct = function (id) {
+		$location.path('/product/delete/' + id);
 	}
 
-	$scope.confirmDeteleProduct = function (index) {
-		$scope.product = $rootScope.listProduct[index];
-		$scope.product.index = index;
-		$('#deteleModal').modal('show');
+	$scope.goToEditProduct = function (id) {
+		$location.path('/product/edit/' + id);
 	}
 
-	$scope.deleteProduct = function (index) {
-		$rootScope.listProduct.splice(index, 1);
-		$('#deteleModal').modal('hide');
+	$scope.goToAddProduct = function () {
+		$location.path('/product/add');
 	}
 
+	function onGetProductsFailed(error) {
+		console.log(error);
+	}
+
+	function onGetProductsSuccessfully(data) {
+		$scope.listProduct = data;
+	}
 });
