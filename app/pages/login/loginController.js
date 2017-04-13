@@ -5,10 +5,32 @@ app.controller('loginCtrl', function ($scope, $rootScope, $location, userService
 		username: '',
 		password: ''
 	};
+
+	$scope.loginFormConfig = [
+		{
+			name: 'username',
+			type: 'text',
+			require: true,
+			placeholder: 'Username',
+			label: "Username"
+		},
+		{
+			name: 'password',
+			type: 'password',
+			require: true,
+			placeholder: 'Password',
+			label: "Password"
+		},
+		{
+			type: 'submit',
+			placeholder: 'Login'
+		}
+	];
+
 	$scope.message = null;
 
-	$scope.login = function () {
-		userService.login($scope.user.username, $scope.user.password, onLoginSuccessfully, onLoginFailed);
+	$scope.login = function (data) {
+		userService.login(data.username, data.password, onLoginSuccessfully, onLoginFailed);
 	};
 
 	function onLoginFailed(error) {

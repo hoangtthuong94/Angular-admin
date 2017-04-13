@@ -5,23 +5,23 @@ app.config(function ($routeProvider, $locationProvider) {
 			requireLogin: true
 		})
 		.when('/dashboard', {
-			templateUrl: 'pages/dashboard/dashboard.html',
-			controller: 'dashboardCtrl',
+			template: '<dashboard-page></dashboard-page>',
 			requireLogin: true
 		})
 		.when('/login', {
-			templateUrl: 'pages/login/login.html',
-			controller: 'loginCtrl',
+			template: '<login-page></login-page>',
 			requireLogin: false
 		})
 		.when('/product/delete/:productID', {
-			templateUrl: 'pages/delete/delete.html',
-			controller: 'deleteCtrl',
+			template: '<delete-page></delete-page>',
 			requireLogin: true
 		})
 		.when('/product/edit/:productID', {
-			templateUrl: 'pages/edit/edit.html',
-			controller: 'editCtrl',
+			template: '<edit-page></edit-page>',
+			requireLogin: true
+		})
+		.when('/product/add', {
+			template: '<add-product-page></add-product-page>',
 			requireLogin: true
 		});
 
@@ -29,6 +29,5 @@ app.config(function ($routeProvider, $locationProvider) {
 		enabled: true,
 		requireBase: false
 	});
-
 
 });

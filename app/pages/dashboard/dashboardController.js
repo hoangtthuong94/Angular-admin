@@ -1,5 +1,5 @@
 app.controller('dashboardCtrl', function ($scope, $rootScope, $location, productService) {
-	$rootScope.title = "dashboard";
+	$rootScope.title = 'dashboard';
 	$scope.listProduct = null;
 
 	$scope.getListProduct = function () {

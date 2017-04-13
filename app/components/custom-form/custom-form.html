@@ -1,0 +1,20 @@
+<form name="customForm" ng-submit="$ctrl.onSubmit({data: $ctrl.data})" ng-if="$ctrl.configs">
+	<div class="form-group" ng-repeat="config in $ctrl.configs" ng-switch="config.type">
+
+		<div class="text-center">
+			<button class="btn btn-primary" type="submit"
+			        ng-disabled="customForm.$invalid"
+			        ng-bind="config.placeholder"
+			        ng-switch-when="submit"
+			></button>
+		</div>
+
+		<label ng-bind="config.label"></label>
+
+		<input type="{{config.type}}" class="form-control" placeholder="{{config.placeholder}}"
+		       name="{{config.name}}"
+		       ng-required="config.require"
+		       ng-model="$ctrl.data[config.name]"
+		       ng-switch-default>
+	</div>
+</form>

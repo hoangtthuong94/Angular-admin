@@ -1,4 +1,4 @@
-app.service("productService", function($http, $location) {
+app.factory("productService", function($http, $location) {
 
 	var getProductUrl = "/data/product.json",
 		products = {};
@@ -47,8 +47,10 @@ app.service("productService", function($http, $location) {
 		return false;
 	}
 	
-	function addProduct() {
-
+	function addProduct(product) {
+		product.id = products.length;
+		products.push(product);
+		return true;
 	}
 
 	function updateProduct(id, product) {

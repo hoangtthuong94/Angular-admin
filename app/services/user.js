@@ -1,4 +1,4 @@
-app.service('userService', function ($http) {
+app.factory('userService', function ($http) {
 	var loginUrl = '/data/user.json';
 	var user = null;
 
