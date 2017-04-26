@@ -11,9 +11,6 @@ h1 {
 table td {
   max-width: 400px; }
 
-html {
-  overflow-y: hidden; }
-
 .page-login, .page-delete, .page-edit, .page-dashboard {
   top: 0;
   left: 0;
@@ -26,9 +23,9 @@ html {
 
 /* login -------------------------- */
 .page-login.ng-leave {
-  -webkit-animation: slideOutLeft 0.5s both ease-in;
-  -moz-animation: slideOutLeft 0.5s both ease-in;
-  animation: slideOutLeft 0.5s both ease-in; }
+  -webkit-animation: slideOutTop 0.5s both ease-in;
+  -moz-animation: slideOutTop 0.5s both ease-in;
+  animation: slideOutTop 0.5s both ease-in; }
 
 .page-login.ng-enter {
   -webkit-animation: slideOutLeft 0.5s both ease-in;
@@ -37,14 +34,14 @@ html {
 
 /* dashboard ------------------------ */
 .page-dashboard.ng-leave {
-  -webkit-animation: slideOutLeft 0.5s both ease-in;
-  -moz-animation: slideOutLeft 0.5s both ease-in;
-  animation: slideOutLeft 0.5s both ease-in; }
+  -webkit-animation: slideOutDown 0.5s both ease-in;
+  -moz-animation: slideOutDown 0.5s both ease-in;
+  animation: slideOutDown 0.5s both ease-in; }
 
 .page-dashboard.ng-enter {
-  -webkit-animation: slideInRight 0.5s both ease-in;
-  -moz-animation: slideInRight 0.5s both ease-in;
-  animation: slideInRight 0.5s both ease-in; }
+  -webkit-animation: slideInDown 0.5s both ease-in;
+  -moz-animation: slideInDown 0.5s both ease-in;
+  animation: slideInDown 0.5s both ease-in; }
 
 /* edit ---------------------- */
 .page-edit.ng-leave {
@@ -61,7 +58,7 @@ html {
   animation: slideInUp 0.5s both ease-in; }
 
 /* delete ---------------------- */
-.page-delete.ng-leave {
+.page-delete.ng-enter {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: rotateOutNewspaper .5s both ease-in;
   -moz-transform-origin: 50% 50%;
@@ -69,10 +66,10 @@ html {
   transform-origin: 50% 50%;
   animation: rotateOutNewspaper .5s both ease-in; }
 
-.page-delete.ng-enter {
-  -webkit-animation: slideInUp 0.5s both ease-in;
-  -moz-animation: slideInUp 0.5s both ease-in;
-  animation: slideInUp 0.5s both ease-in; }
+.page-delete.ng-leave {
+  -webkit-animation: slideOutLeft 0.5s both ease-in;
+  -moz-animation: slideOutLeft 0.5s both ease-in;
+  animation: slideOutLeft 0.5s both ease-in; }
 
 /* rotate and fall */
 @-webkit-keyframes rotateFall {
@@ -124,7 +121,7 @@ html {
   from {
     opacity: 0.3;
     -webkit-transform: scale(0.8); } }
-/* slide in from the right */
+/* slide in from the right*/
 @keyframes slideInRight {
   from {
     transform: translateX(100%); }
@@ -140,6 +137,42 @@ html {
     -webkit-transform: translateX(100%); }
   to {
     -webkit-transform: translateX(0); } }
+/* slide out right */
+@keyframes slideOutRight {
+  to {
+    transform: translateX(100%); } }
+@-moz-keyframes slideOutRight {
+  to {
+    -moz-transform: translateX(100%); } }
+@-webkit-keyframes slideOutRight {
+  to {
+    -webkit-transform: translateX(100%); } }
+/* slide in from the left */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%); }
+  to {
+    transform: translateX(0); } }
+@-moz-keyframes slideInLeft {
+  from {
+    -moz-transform: translateX(-100%); }
+  to {
+    -moz-transform: translateX(0); } }
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(-100%); }
+  to {
+    -webkit-transform: translateX(0); } }
+/* slide out left*/
+@keyframes slideOutLeft {
+  to {
+    transform: translateX(-100%); } }
+@-moz-keyframes slideOutLeft {
+  to {
+    -moz-transform: translateX(-100%); } }
+@-webkit-keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-100%); } }
 /* slide in from the bottom */
 @keyframes slideInUp {
   from {
@@ -156,16 +189,42 @@ html {
     -webkit-transform: translateY(100%); }
   to {
     -webkit-transform: translateY(0); } }
-/* slide in from the bottom */
-@keyframes slideOutLeft {
+/* slide in from the top */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%); }
   to {
-    transform: translateX(-100%); } }
-@-moz-keyframes slideOutLeft {
+    transform: translateY(0); } }
+@-moz-keyframes slideInDown {
+  from {
+    -moz-transform: translateY(-100%); }
   to {
-    -moz-transform: translateX(-100%); } }
-@-webkit-keyframes slideOutLeft {
+    -moz-transform: translateY(0); } }
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translateY(-100%); }
   to {
-    -webkit-transform: translateX(-100%); } }
+    -webkit-transform: translateY(0); } }
+/* slide out top */
+@keyframes slideOutTop {
+  to {
+    transform: translateY(-100%); } }
+@-moz-keyframes slideOutTop {
+  to {
+    -moz-transform: translateY(-100%); } }
+@-webkit-keyframes slideOutTop {
+  to {
+    -webkit-transform: translateY(-100%); } }
+/* slide out down */
+@keyframes slideOutDown {
+  to {
+    transform: translateY(100%); } }
+@-moz-keyframes slideOutDown {
+  to {
+    -moz-transform: translateY(100%); } }
+@-webkit-keyframes slideOutDown {
+  to {
+    -webkit-transform: translateY(100%); } }
 /* rotate out newspaper */
 @-webkit-keyframes rotateOutNewspaper {
   to {
