@@ -1,4 +1,4 @@
-var app = angular.module('adminApp', ['ngRoute']);
+var app = angular.module('adminApp', ['ngRoute', 'ngAnimate']);
 
 app.run(function ($rootScope, $route, $location, userService) {
 	$rootScope.title = 'hoanghuong';

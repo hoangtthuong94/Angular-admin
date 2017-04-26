@@ -8,6 +8,7 @@ app.component('editPage', {
 
 	controller: function ($scope, $rootScope, $location, $routeParams, productService) {
 		'use strict';
+		$rootScope.pageClass = 'page-edit';
 		$rootScope.title = 'Edit product';
 		var productID = $routeParams.productID;
 

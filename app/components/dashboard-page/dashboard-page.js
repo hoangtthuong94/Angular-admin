@@ -3,7 +3,7 @@ app.component('dashboardPage', {
 	bindings: {},
 	controller: function ($scope, $rootScope, $location, productService) {
 		'use strict';
-
+		$rootScope.pageClass = 'page-dashboard';
 		$rootScope.title = 'Dashboard';
 		$scope.listProduct = null;
 

@@ -4,6 +4,7 @@ app.component('deletePage', {
 	controller: function ($scope, $rootScope, $routeParams, $location, productService) {
 		'use strict';
 
+		$rootScope.pageClass = 'page-delete';
 		$rootScope.title = 'Delete Product';
 		var productID = $routeParams.productID;
 

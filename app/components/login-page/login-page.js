@@ -4,6 +4,7 @@ app.component('loginPage', {
 
 	controller: function ($scope, $rootScope, $location, userService) {
 		'use strict';
+		$rootScope.pageClass = 'page-login';
 		$rootScope.title = 'login';
 
 		$scope.user = {
